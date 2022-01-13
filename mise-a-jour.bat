@@ -160,9 +160,10 @@ if exist t.hta del t.hta
 
 cd %USERPROFILE%
 
-git clone https://github.com/00MY00/t.git --progress
+git clone https://github.com/00MY00/interface.git --progress
 if %errorlevel% == 1 set ERREUR=1
-copy /Y %USERPROFILE%\interface %back%\
+copy /Y %USERPROFILE%\interface %back%
+if %errorlevel% == 1 set ERREUR=1
 
 if %ERREUR% == 1 (echo [41;37m[ERREUR] [40;33mLa creation de la nouvelle interface a échouer & echo [40;31mRéinstaler le programe	[40;33mest verifier que votre système est compatible & echo une fenaitre va s'ouvrir vous permetent de verifier & timeout /t 10 nobreak & goto test-version-compatibl-system) else (echo [40;33mNouvelle interface [42;37m[OK]  [40;33m)
 
