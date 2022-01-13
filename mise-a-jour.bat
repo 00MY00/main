@@ -160,7 +160,7 @@ if exist t.hta del t.hta
 
 cd %USERPROFILE%
 
-git clone https://github.com/00MY00/interface.git --progress
+git clone https://github.com/00MY00/t.git --progress
 if %errorlevel% == 1 set ERREUR=1
 copy /Y %USERPROFILE%\interface %back%\
 
